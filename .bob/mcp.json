@@ -1,0 +1,159 @@
+{
+  "mcpServers": {
+    "legacyengine-verifier": {
+      "command": "node",
+      "args": ["hooks/mcp_verifier_server.js"],
+      "env": {
+        "BACKEND_DIR": "backend"
+      },
+      "timeout": 120000,
+      "alwaysAllow": [
+        "run_legacy_engine_audit",
+        "read_defect_report",
+        "read_verify_log"
+      ],
+      "disabled": false
+    },
+    "demo-runner": {
+      "command": "node",
+      "args": ["hooks/mcp_demo_runner_server.js"],
+      "env": {
+        "BACKEND_DIR": "backend"
+      },
+      "timeout": 300000,
+      "alwaysAllow": [
+        "run_full_demo_pipeline",
+        "run_schema_validation"
+      ],
+      "disabled": false
+    },
+    "java-bond-audit": {
+      "command": "node",
+      "args": ["hooks/mcp_java_bond_audit_server.js"],
+      "env": {
+        "BACKEND_DIR": "backend"
+      },
+      "timeout": 60000,
+      "alwaysAllow": [
+        "run_java_bond_race_test",
+        "run_java_bond_static_audit"
+      ],
+      "disabled": false
+    },
+    "c-wire-audit": {
+      "command": "node",
+      "args": ["hooks/mcp_c_wire_audit_server.js"],
+      "env": {
+        "BACKEND_DIR": "backend"
+      },
+      "timeout": 60000,
+      "alwaysAllow": [
+        "run_c_wire_overflow_audit",
+        "run_c_wire_static_analysis"
+      ],
+      "disabled": false
+    },
+    "sql-injection-audit": {
+      "command": "node",
+      "args": ["hooks/mcp_sql_injection_audit_server.js"],
+      "env": {
+        "BACKEND_DIR": "backend"
+      },
+      "timeout": 30000,
+      "alwaysAllow": [
+        "run_sql_injection_audit",
+        "run_schema_audit"
+      ],
+      "disabled": false
+    },
+    "python-pension-audit": {
+      "command": "node",
+      "args": ["hooks/mcp_python_pension_audit_server.js"],
+      "env": {
+        "BACKEND_DIR": "backend"
+      },
+      "timeout": 60000,
+      "alwaysAllow": [
+        "run_python_pension_drift_test",
+        "run_python_reconciliation_audit"
+      ],
+      "disabled": false
+    },
+    "cobol-audit": {
+      "command": "node",
+      "args": ["hooks/mcp_cobol_audit_server.js"],
+      "env": {
+        "BACKEND_DIR": "backend"
+      },
+      "timeout": 60000,
+      "alwaysAllow": [
+        "run_cobol_analysis",
+        "run_cobol_build_check"
+      ],
+      "disabled": false
+    },
+    "schema-validator": {
+      "command": "node",
+      "args": ["hooks/mcp_schema_validator_server.js"],
+      "env": {
+        "BACKEND_DIR": "backend"
+      },
+      "timeout": 30000,
+      "alwaysAllow": [
+        "run_schema_validation",
+        "run_audit_procedure_analysis"
+      ],
+      "disabled": false
+    },
+    "watson-nlu": {
+      "command": "node",
+      "args": ["hooks/mcp_watson_nlu_server.js"],
+      "env": {
+        "WATSON_NLU_INSTANCE_URL": "https://<YOUR_NLU_INSTANCE>.us-south.natural-language-understanding.watson.cloud.ibm.com",
+        "WATSON_NLU_API_KEY": "<YOUR_NLU_API_KEY>"
+      },
+      "timeout": 30000,
+      "alwaysAllow": [],
+      "disabled": true
+    },
+    "watson-discovery": {
+      "command": "node",
+      "args": ["hooks/mcp_watson_discovery_server.js"],
+      "env": {
+        "WATSON_DISCOVERY_INSTANCE_URL": "https://<YOUR_DISCOVERY_INSTANCE>.us-south.discovery.watson.cloud.ibm.com",
+        "WATSON_DISCOVERY_API_KEY": "<YOUR_DISCOVERY_API_KEY>",
+        "WATSON_DISCOVERY_PROJECT_ID": "<YOUR_PROJECT_ID>"
+      },
+      "timeout": 30000,
+      "alwaysAllow": [],
+      "disabled": true
+    },
+    "ibm-z-connector": {
+      "command": "node",
+      "args": ["hooks/mcp_ibmz_server.js"],
+      "env": {
+        "ZOSMF_BASE_URL": "https://<YOUR_ZOSMF_HOST>:<PORT>/zosmf",
+        "ZOSMF_USER": "<YOUR_ZOSMF_USER>",
+        "ZOSMF_PASSWORD": "<YOUR_ZOSMF_PASSWORD>",
+        "CMOD_BASE_URL": "https://<YOUR_CMOD_HOST>/cmod-rest/v1",
+        "CMOD_API_KEY": "<YOUR_CMOD_API_KEY>"
+      },
+      "timeout": 60000,
+      "alwaysAllow": [],
+      "disabled": true
+    },
+    "ibm-i-connector": {
+      "command": "node",
+      "args": ["hooks/mcp_ibmi_server.js"],
+      "env": {
+        "IBMI_HOST": "<YOUR_IBM_I_HOST>",
+        "IBMI_USER": "<YOUR_IBM_I_USER>",
+        "IBMI_PASSWORD": "<YOUR_IBM_I_PASSWORD>",
+        "DB2_CONNECTION_STRING": "<YOUR_DB2_CONN_STRING>"
+      },
+      "timeout": 60000,
+      "alwaysAllow": [],
+      "disabled": true
+    }
+  }
+}
