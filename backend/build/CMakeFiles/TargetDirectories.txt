@@ -1,0 +1,3 @@
+/Users/kc/FinTechLedgerCompliance/backend/build/CMakeFiles/ledger_api.dir
+/Users/kc/FinTechLedgerCompliance/backend/build/CMakeFiles/edit_cache.dir
+/Users/kc/FinTechLedgerCompliance/backend/build/CMakeFiles/rebuild_cache.dir
