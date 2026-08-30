@@ -131,6 +131,8 @@ Bash, Node.js, CMake, `g++`, SQLite support, Python 3, Java (`javac`/`java`), an
 
 The script builds the COBOL core, standalone C++ gateway, and modern API, then prints example requests before starting the API on `127.0.0.1:8080`.
 
+### 5. Bob Financial Ledger Architecutre and System Diagram
+[Excalidraw Bob Financial Ledger Architecutre and System Diagram](https://excalidraw.com/#json=nd3mIYmh8huyo7hoq0Asm,htP_JuUeGjnRg-59qU8fwA)
 ## Security and compliance rules
 
 - Modern money paths use integer minor units; floating-point drift is a defect to expose, not a tolerance to hide.
